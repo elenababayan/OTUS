@@ -2,7 +2,8 @@
 initial_list = []
 n = int(input())  # число целых чисел
 degree = int(input())  # степень в которую возводим числа
-whole_numbers = []  # список целых чисел
+whole_numbers = ['1', '2', '5', '10']  # список целых чисел
+whole_numbers_list = list(map(int, whole_numbers))
 
 
 def go_to_raising_a_number_to_a_power():
@@ -17,22 +18,21 @@ def go_to_raising_a_number_to_a_power():
         i += 1
 
 
-def go_to_creating_different_lists():
-    for j in range(len(whole_numbers)):
-        if whole_numbers[j] % 2 == 0:
-            print(whole_numbers[j])
-        else:
-            continue
+def filter_odd_num(in_num):
+    return in_num % 2 == 0
 
-    for j in range(len(whole_numbers)):
-        if whole_numbers[j] % 2 != 0:
-            print(whole_numbers[j])
-        else:
-            continue
 
-    for j in range(len(whole_numbers)):
+def filter_even_num(in_num):
+    return in_num % 2 != 0
+
+
+def filter_prime_num():
+    for j in whole_numbers_list:
         for num in range(2, j):
-            if whole_numbers[j] % num != 0:
-                print(whole_numbers[j])
-            else:
-                continue
+            return j % num == 0
+
+
+go_to_raising_a_number_to_a_power()
+print(list(filter(filter_odd_num, whole_numbers_list)))
+print(list(filter(filter_even_num, whole_numbers_list)))
+print(list(filter(filter_prime_num, whole_numbers_list)))
