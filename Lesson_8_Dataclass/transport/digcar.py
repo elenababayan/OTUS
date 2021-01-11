@@ -1,9 +1,9 @@
-from Lesson_8_Dataclass.base_page import BaseTransport
 from dataclasses import dataclass
+from Lesson_8_Dataclass.transport.car import Car
 
 
 @dataclass
-class Car(BaseTransport):
+class BigCar(Car):
     equipment: str
     transmission: str
     wheels: int
@@ -17,10 +17,4 @@ class Car(BaseTransport):
     height: float
     width: float
 
-
-@dataclass
-class EngineInf:  # двигатель
-    fuel: float
-    capacity: float
-    power: int
 

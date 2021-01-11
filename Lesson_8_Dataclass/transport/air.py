@@ -1,12 +1,12 @@
-from Lesson_8_Dataclass.base_page import BaseTransport
 from dataclasses import dataclass
+
+from Lesson_8_Dataclass.base_page import BaseTransport
 
 
 @dataclass
-class Car(BaseTransport):
+class Air(BaseTransport):  # самолет
     equipment: str
     transmission: str
-    wheels: int
     engine: dict
     weight: dict
     carrying: int
@@ -16,11 +16,3 @@ class Car(BaseTransport):
     length: float
     height: float
     width: float
-
-
-@dataclass
-class EngineInf:  # двигатель
-    fuel: float
-    capacity: float
-    power: int
-

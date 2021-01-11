@@ -1,13 +1,13 @@
-from Lesson_8_Dataclass.base_page import BaseTransport
 from dataclasses import dataclass
+
+from Lesson_8_Dataclass.base_page import BaseTransport
 
 
 @dataclass
-class Car(BaseTransport):
+class Aqua(BaseTransport):  # корабль
     equipment: str
-    transmission: str
-    wheels: int
     engine: dict
+    sail: dict
     weight: dict
     carrying: int
     model: str
@@ -19,8 +19,5 @@ class Car(BaseTransport):
 
 
 @dataclass
-class EngineInf:  # двигатель
-    fuel: float
-    capacity: float
-    power: int
-
+class SailInf:# парус
+    pass # свойства паруса
