@@ -1,5 +1,11 @@
 from dataclasses import dataclass
 
+list_errors = {}
+with open("/Users/bulbik/OTUS/Lesson_8_Dataclass/transport/errors.txt") as file:
+    for line in file:
+        key, value = line.split()
+        list_errors[key] = value
+
 
 @dataclass
 class BaseTransport:
@@ -25,5 +31,5 @@ def fuel_test():
         return False
 
 
-def turn_on_the_engine(self):
+def turn_on_the_engine():
     print("Двигатель включен")
