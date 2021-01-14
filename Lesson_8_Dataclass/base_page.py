@@ -11,10 +11,11 @@ class BaseTransport:
     length: float
     height: float
     width: float
+    fuel_min: float
 
 
 def make_a_sound(self):
-    pass
+    print("Нажат клаксон")
 
 
 def fuel_test():
@@ -22,7 +23,6 @@ def fuel_test():
         return turn_on_the_engine
     else:
         return False
-    #
 
 
 def turn_on_the_engine(self):

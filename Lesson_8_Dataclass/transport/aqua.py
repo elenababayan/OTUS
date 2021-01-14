@@ -16,6 +16,7 @@ class Aqua(BaseTransport):  # корабль
     length: float
     height: float
     width: float
+    fuel_min: float
 
 
 @dataclass

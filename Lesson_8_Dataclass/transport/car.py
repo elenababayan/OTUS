@@ -16,6 +16,7 @@ class Car(BaseTransport):
     length: float
     height: float
     width: float
+    fuel_min: float
 
 
 @dataclass
