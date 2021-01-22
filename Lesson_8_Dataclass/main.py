@@ -1,7 +1,7 @@
 from Lesson_8_Dataclass.base_page import fuel_test, turn_on_the_engine
 from Lesson_8_Dataclass.transport.air import test_takeoff, test_landing
 
-if __name__ == "__mane__":
+if __name__ == "__mane__":  # тест для самолета
     fuel = 26025
     speed = 220
     elevation = 5
@@ -13,5 +13,6 @@ if __name__ == "__mane__":
     turn_on_the_engine()
     test_takeoff()
     test_landing()
+
 
 
