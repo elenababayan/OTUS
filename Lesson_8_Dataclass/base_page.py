@@ -20,17 +20,17 @@ class BaseTransport:
     engine: dict
     fuel_min: float
 
+    @staticmethod
+    def make_a_sound():
+        print("Нажат клаксон")
 
-def make_a_sound(self):
-    print("Нажат клаксон")
+    @staticmethod
+    def fuel_test():
+        if fuel >= fuel_min:
+            return turn_on_the_engine
+        else:
+            print(' '.join(list_errors.get('009')))
 
-
-def fuel_test():
-    if fuel >= fuel_min:
-        return turn_on_the_engine
-    else:
-        print(' '.join(list_errors.get('009')))
-
-
-def turn_on_the_engine():
-    print("Двигатель включен")
+    @staticmethod
+    def turn_on_the_engine():
+        print("Двигатель включен")
