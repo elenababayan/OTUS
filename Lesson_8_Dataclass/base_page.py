@@ -1,3 +1,4 @@
+from abc import abstractmethod, ABCMeta
 from dataclasses import dataclass
 
 list_errors = {}
@@ -9,6 +10,7 @@ with open("/Users/bulbik/OTUS/Lesson_8_Dataclass/transport/errors.txt") as file:
 
 @dataclass
 class BaseTransport:
+    __metaclass__ = ABCMeta
     weight: dict
     carrying: int
     model: str
@@ -18,6 +20,7 @@ class BaseTransport:
     height: float
     width: float
     engine: dict
+    fuel: float
     fuel_min: float
 
     @staticmethod
@@ -25,12 +28,9 @@ class BaseTransport:
         print("Нажат клаксон")
 
     @staticmethod
+    @abstractmethod
     def fuel_test():
-        if fuel >= fuel_min:
-            return turn_on_the_engine
+        if fuel_min <= fuel:
+            print("Двигатель включен")
         else:
             print(' '.join(list_errors.get('009')))
-
-    @staticmethod
-    def turn_on_the_engine():
-        print("Двигатель включен")

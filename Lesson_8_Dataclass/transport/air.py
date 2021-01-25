@@ -4,15 +4,25 @@ from Lesson_8_Dataclass.base_page import BaseTransport
 
 @dataclass
 class Air(BaseTransport):  # самолет
-    engine: dict
     weight: dict
+    carrying: int
     model: str
     brand: str
     seats: int
     length: float
     height: float
-    fuel_min: float = 26025
+    width: float
+    engine: dict
+    fuel_min: float
+    fuel: int
 
+    @staticmethod
+    def get_transport(data: dict):
+        brand = "300-971"
+        model = "Боинг"
+        return brand, model
+
+    @staticmethod
     def test_takeoff():
         def test_on_board_computer():
             return start_of_takeoff
@@ -37,7 +47,7 @@ class Air(BaseTransport):  # самолет
             else:
                 print(' '.join(list_errors.get('004')))
 
-
+    @staticmethod
     def test_landing():
         def approach():
             if landing_height == 400:
