@@ -28,7 +28,6 @@ class BaseTransport:
         print("Нажат клаксон")
 
     @staticmethod
-    @abstractmethod
     def fuel_test():
         if fuel_min <= fuel:
             print("Двигатель включен")
